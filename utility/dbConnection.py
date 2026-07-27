@@ -1,15 +1,14 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, Blueprint
 from flask_pymongo import PyMongo
+from pymongo import MongoClient 
 import os 
 from dotenv import load_dotenv
 
-app = Flask(__name__)
 def dbConfig():
 
     load_dotenv()
-    app.config['MONGO_URI'] = os.getenv('MONGO_DB_URI')
-    mongo = PyMongo(app)
-    mongo.db = mongo.cx['pyCRUD']
+    client = MongoClient(os.getenv('MONGO_DB_URI'))
+    db = client['pyCRUD']
     print('MongoDB Connected')
 
-    return mongo
+    return db
