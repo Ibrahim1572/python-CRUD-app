@@ -29,10 +29,13 @@ def signUpFunc():
 @routes.route('/signin', methods=['POST'])
 async def signIn():
     data = request.get_json()
-    dbUser = mongo.db.users.find({'email':data.get('email')})
-    
-    print('user1: ', dbUser)
-    print('user2: ', list(dbUser))
-    print('user3: ', list(dbUser)[0])
-    
-    return jsonify({'message':'htis is signin route'})
+    dbUser = list(mongo.users.find({'email':data.get('email')}))
+    if(dbUser):
+        dbUSerPassword = dbUser[0]['password']
+        if(data['password']==dbUSerPassword):
+            #cookies things
+            return jsonify({'message':'user logged in'}), 200
+        else:
+            return jsonify({'message':'wrong password'})
+    else:
+        return jsonify({'message':'no User found'}) ,200
