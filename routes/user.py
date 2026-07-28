@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request, Blueprint
 from utility.dbConnection import dbConfig
 from datetime import datetime, timedelta
 from flask_jwt_extended import create_access_token, create_refresh_token, set_access_cookies, set_refresh_cookies
-from flask_jwt_extended import get_jwt, jwt_required
+from flask_jwt_extended import get_jwt, jwt_required, unset_jwt_cookies
 routes = Blueprint('routes', __name__)
 mongo = dbConfig()
 
@@ -92,9 +92,9 @@ async def signIn():
 @routes.route('/logout', methods=['GET'])
 @jwt_required()
 def signOut():
-    # token = get_jwt()
-    # print('token', token)
-    return jsonify({'message': 'user logged out'})
+    response = jsonify({'message': 'user logged out'})
+    unset_jwt_cookies(response)
+    return response, 200
 
 
 
