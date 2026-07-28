@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request, Blueprint
 from utility.dbConnection import dbConfig
 from flask_jwt_extended import jwt_required, get_jwt
-from fla
+from datetime import datetime, timedelta
 
 routes = Blueprint('routes', __name__)
 mongo = dbConfig()
@@ -10,7 +10,6 @@ mongo = dbConfig()
 @routes.route('/viewAll', methods=['GET'])
 @jwt_required()
 def viewAll():
-    token = get_jwt()
     isDeleted = request.args.get('isDeleted', False)
     posts = list(mongo.posts.find({'isDeleted':isDeleted}))
     return jsonify({'posts':posts}), 200
@@ -21,7 +20,6 @@ def viewAll():
 @jwt_required()
 def viewOne():
     data = request.get_json()
-    token = get_jwt()
     posts = list(mongo.posts.find({'isDeleted':False, 'postTitle':data['postTitle']}))
     if(posts):
         posts = posts[0]
@@ -29,7 +27,25 @@ def viewOne():
     else:
         return jsonify({'message':'post not found'})
     
+   
+# add post route 
+@routes.route('/addPost', methods=['POST'])
+@jwt_required()
+def addPost():
+    token = get_jwt()
     
-        
-        
+    data = request.get_json()
+    userData = data['userData']
+    
+    newPost = {
+        'postTitle': userData['postTitle'],
+        'postBody': userData['postBody'],
+        'postedBy': token['sub'],
+        'createdAt': datetime.now(),
+        'updatedLog':[],
+        'isDeleted': False,
+        'deleteDate': datetime.now()
+    }    
+    
+     
     
