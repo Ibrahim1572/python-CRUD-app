@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request, Blueprint
 from utility.dbConnection import dbConfig
 from flask_jwt_extended import jwt_required, get_jwt
+from fla
 
 routes = Blueprint('routes', __name__)
 mongo = dbConfig()
@@ -10,7 +11,8 @@ mongo = dbConfig()
 @jwt_required()
 def viewAll():
     token = get_jwt()
-    posts = list(mongo.posts.find({'isDeleted':False}))
+    isDeleted = request.args.get('isDeleted', False)
+    posts = list(mongo.posts.find({'isDeleted':isDeleted}))
     return jsonify({'posts':posts}), 200
 
 
@@ -26,6 +28,8 @@ def viewOne():
         return jsonify({'post':posts}), 200
     else:
         return jsonify({'message':'post not found'})
+    
+    
         
         
     
