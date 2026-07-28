@@ -4,17 +4,18 @@ from routes.user import routes
 import asyncio
 import os
 from dotenv import load_dotenv
-from flask_jwt_extended import jwt_manager
+from flask_jwt_extended import JWTManager
 
 load_dotenv()
 app = Flask(__name__)
 app.register_blueprint(routes)
-app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY')
-app.config['JWT_COOKIE_SECURE'] = False
+secretKey = os.getenv('JWT_SECRET_KEY')
+# print('secret key:', type(secretKey))
+app.config['JWT_SECRET_KEY'] = secretKey
 app.config['JWT_COOKIE_HTTPONLY'] = True
-app.config['JWT_TOKEN_LOCATION'] = ['cookies']
+app.config['JWT_COOKIE_CSRF_PROTECT'] = False
 
-jwt = jwt_manager(app)
+jwt = JWTManager(app)
 
 @app.route('/')
 async def home():
