@@ -36,6 +36,9 @@ def addPost():
     
     data = request.get_json()
     userData = data['userData']
+    dbPost = list(mongo.posts.find_one({'postTitle':userData['postTitle']}))
+    if(dbPost):
+        return jsonify({'message':'post title already taken'})
     
     newPost = {
         'postTitle': userData['postTitle'],
@@ -45,7 +48,12 @@ def addPost():
         'updatedLog':[],
         'isDeleted': False,
         'deleteDate': datetime.now()
-    }    
+    }   
+    
+    postedPost = mongo.posts.insert_one({newPost}) 
+    
+    return jsonify({'message':'post added', 'post': newPost}), 200
+    
     
      
     
