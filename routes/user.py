@@ -1,8 +1,8 @@
 from flask import Flask, jsonify, request, Blueprint
 from utility.dbConnection import dbConfig
-from datetime import datetime
+from datetime import datetime, timedelta
 from flask_jwt_extended import create_access_token, create_refresh_token, set_access_cookies, set_refresh_cookies
-
+from flask_jwt_extended import get_jwt, jwt_required
 routes = Blueprint('routes', __name__)
 mongo = dbConfig()
 
@@ -50,18 +50,27 @@ def signUpFunc():
 @routes.route('/signin', methods=['POST'])
 async def signIn():
     data = request.get_json()
-    dbUser = list(mongo.users.find({'email':data.get('email')}))
-    cookieData = {'userName':data['userName'], 'email':data['email'], 'role': data['role']}
+    
+    dbUser = list(mongo.users.find({'email':data.get('email')}))    
+    
     if(dbUser):
-        dbUSerPassword = dbUser[0]['password']
+        dbUser = dbUser[0]
+            
+        cookieData = {'userName':dbUser['userName'], 'role': dbUser['role']}
+        dbUSerPassword = dbUser['password']
+        
         if(data['password']==dbUSerPassword):
-            refresh_token = create_refresh_token(identity=cookieData)
-            access_token = create_access_token(identity=cookieData)
+            dbRefreshToken = mongo.refreshTokens.update_many(filter={'userEmail':dbUser['email']}, update={'$set':{'isValid':False}})
+
+            refresh_token = create_refresh_token(identity=dbUser['email'], additional_claims=cookieData)
+            access_token = create_access_token(identity=dbUser['email'], additional_claims=cookieData)
             
             resp = jsonify({'message':'user logged in'})
             
-            set_refresh_cookies(resp, refresh_token)
-            set_access_cookies(resp, access_token)
+            set_refresh_cookies(resp, refresh_token, max_age=7*24*60*60)
+            set_access_cookies(resp, access_token, max_age=15*60)
+            
+            inserted_refresh_token = mongo.refreshTokens.insert_one({'isValid':True, 'token':refresh_token, 'userEmail':data.get('email'), 'createdAt':datetime.now(), 'expiresAt':datetime.now()+timedelta(days=7)})
             
             return resp, 200
 
@@ -81,8 +90,10 @@ async def signIn():
     
     
 @routes.route('/logout', methods=['GET'])
+@jwt_required()
 def signOut():
-    #clearing cookies
+    # token = get_jwt()
+    # print('token', token)
     return jsonify({'message': 'user logged out'})
 
 
