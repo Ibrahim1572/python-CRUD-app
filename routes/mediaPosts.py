@@ -35,14 +35,14 @@ def addPost():
     token = get_jwt()
     
     data = request.get_json()
-    userData = data['userData']
-    dbPost = list(mongo.posts.find_one({'postTitle':userData['postTitle']}))
-    if(dbPost):
+    postData = data['postData']
+    dbPost = list(mongo.posts.find_one({'postTitle':postData['postTitle']}))
+    if(not dbPost):
         return jsonify({'message':'post title already taken'})
     
     newPost = {
-        'postTitle': userData['postTitle'],
-        'postBody': userData['postBody'],
+        'postTitle': postData['postTitle'],
+        'postBody': postData['postBody'],
         'postedBy': token['sub'],
         'createdAt': datetime.now(),
         'updatedLog':[],
@@ -56,4 +56,24 @@ def addPost():
     
     
      
+# update post route
+@routes.route('/updatePost', methods=['PATCH'])
+@jwt_required()
+def updatePost():
+    token = get_jwt()
+    data = request.get_json()
+    postData = data['postData']
+    
+    dbPost = list(mongo.posts.find_one({'postTitle':postData['postTitle']}))
+    if(not dbPost):
+        return jsonify({'message':'post not found'})
+    
+    if(dbPost[0]['email']!=token['sub']):
+        return jsonify({'message':'user is unauthorized to perform this action (you can only update your own post)'})
+    
+    #rest of the update post logic
+    
+    
+# delete post route
+@routes.route('/deletePost', )
     
