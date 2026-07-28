@@ -14,6 +14,7 @@ secretKey = os.getenv('JWT_SECRET_KEY')
 app.config['JWT_SECRET_KEY'] = secretKey
 app.config['JWT_COOKIE_HTTPONLY'] = True
 app.config['JWT_COOKIE_CSRF_PROTECT'] = False
+app.config['JWT_COOKIES_LOCATION'] = ['cookies']
 
 jwt = JWTManager(app)
 
