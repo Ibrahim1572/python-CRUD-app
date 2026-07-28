@@ -46,8 +46,7 @@ def addPost():
         'postedBy': token['sub'],
         'createdAt': datetime.now(),
         'updatedLog':[],
-        'isDeleted': False,
-        'deleteDate': datetime.now()
+        'isDeleted': False
     }   
     
     postedPost = mongo.posts.insert_one({newPost}) 
@@ -74,6 +73,26 @@ def updatePost():
     #rest of the update post logic
     
     
-# delete post route
-@routes.route('/deletePost', )
+# delete and restore post route
+@routes.route('/deleteRestorePost', methods=["PATCH"])
+@jwt_required()
+def deleteRestorePost():
+    token = get_jwt()
+    data = request.get_json()
+    postData = data['postData']
+    isDeleted = request.args.get('isDeleted', False)
+    
+    dbPost = list(mongo.posts.find_one({'postTitle':postData['postTitle'], 'isDeleted':isDeleted}))
+    
+    if(not dbPost):
+        return jsonify({'message':'post not found'})
+    
+    if(not isDeleted):
+        if(dbPost[0]['email']!=token['sub']):
+            return jsonify({'message':'user is unauthorized to perform this action (you can only update your own post)'})
+    
+    post = list(mongo.posts.update_one({'postTitle':postData['postTitle'], 'isDeleted':isDeleted}, {'$set':{'isDeleted':not isDeleted}}))
+    
+    return jsonify({'message': f"post {('restored'if isDeleted else'deleted')}", 'post': post}), 200
+    
     
