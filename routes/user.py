@@ -13,7 +13,6 @@ mongo = dbConfig()
 @routes.route('/signup', methods=['POST'])
 def signUpFunc():
     data = request.get_json()
-    userEmail = data.get('email')
     dbUser = list(mongo.users.find({'email':data.get('email')}))
     print('dbUser: ', dbUser)
     
