@@ -23,5 +23,9 @@ def viewOne():
     posts = list(mongo.posts.find({'isDeleted':False, 'postTitle':data['postTitle']}))
     if(posts):
         posts = posts[0]
+        return jsonify({'post':posts}), 200
+    else:
+        return jsonify({'message':'post not found'})
         
-    return jsonify({'posts':posts}), 200
+        
+    
