@@ -8,13 +8,7 @@ mongo = dbConfig()
 
 
 
-
-
-
-
-
-
-
+# signup route
 
 @routes.route('/signup', methods=['POST'])
 def signUpFunc():
@@ -40,12 +34,7 @@ def signUpFunc():
 
 
 
-
-
-
-
-
-
+# signin route
 
 @routes.route('/signin', methods=['POST'])
 async def signIn():
@@ -79,16 +68,10 @@ async def signIn():
     else:
         return jsonify({'message':'no User found'}) ,200
     
+
+
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+# logout route
 @routes.route('/logout', methods=['GET'])
 @jwt_required()
 def signOut():
@@ -98,10 +81,10 @@ def signOut():
 
 
 
-
-
-
-
-
-
-
+# Get profile data route
+@routes.route('/profile', methods=['GET'])
+@jwt_required()
+def getProfile():
+    token = get_jwt()
+    
+    return jsonify({'email':token['sub'], 'userName':token['userName'], 'role':token['role']})
