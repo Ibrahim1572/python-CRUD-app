@@ -117,7 +117,7 @@ def deleteRestorePost():
     # for post in dbPost:
     #     post['_id'] = str(post['_id'])
     # dbPost = dbPost[0]
-    print('this is dbpost',dbPost)
+    # print('this is dbpost',dbPost)
     
     if(not dbPost):
         return jsonify({'message':'post not found'})
