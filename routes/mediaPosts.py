@@ -113,9 +113,10 @@ def deleteRestorePost():
     isDeleted = request.args.get('isDeleted', 'false').lower()
     isDeleted = True if isDeleted == 'true' else False
     
-    dbPost = list(mongo.posts.find({'postTitle':postData['postTitle'], 'isDeleted':isDeleted}))
-    for post in dbPost:
-        post['_id'] = str(post['_id'])
+    dbPost =mongo.posts.find_one({'postTitle':postData['postTitle'], 'isDeleted':isDeleted})
+    # for post in dbPost:
+    #     post['_id'] = str(post['_id'])
+    # dbPost = dbPost[0]
     print('this is dbpost',dbPost)
     
     if(not dbPost):
@@ -128,6 +129,7 @@ def deleteRestorePost():
             return jsonify({'message':'user is unauthorized to perform this action (you can only update your own post)'})
     
     post = mongo.posts.find_one_and_update({'postTitle':postData['postTitle'], 'isDeleted':isDeleted}, {'$set':{'isDeleted':not isDeleted}})
+    post['_id'] = str(post['_id'])
     
     return jsonify({'message': f"post {('restored'if isDeleted else'deleted')}", 'post': post}), 200
     
