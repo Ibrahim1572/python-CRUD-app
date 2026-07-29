@@ -5,12 +5,12 @@ import asyncio
 import os
 from dotenv import load_dotenv
 from flask_jwt_extended import JWTManager
-from routes.auth import routes as auth_routes
+from routes.user import routes as user_routes
 from routes.mediaPosts import routes as mediaposts_routes
 
 load_dotenv()
 app = Flask(__name__)
-app.register_blueprint(auth_routes)
+app.register_blueprint(user_routes)
 app.register_blueprint(mediaposts_routes)
 secretKey = os.getenv('JWT_SECRET_KEY')
 # print('secret key:', type(secretKey))
