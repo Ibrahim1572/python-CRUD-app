@@ -5,10 +5,10 @@ from datetime import datetime, timedelta
 from pymongo import ReturnDocument
 
 
-routes = Blueprint('routes', __name__)
+routes = Blueprint('mediaposts', __name__)
 mongo = dbConfig()
 
-# view all posts route
+# view all/archived posts route
 @routes.route('/viewAll', methods=['GET'])
 @jwt_required()
 def viewAll():
