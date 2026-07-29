@@ -2,6 +2,8 @@ from flask import Flask, jsonify, request, Blueprint
 from utility.dbConnection import dbConfig
 from flask_jwt_extended import jwt_required, get_jwt
 from datetime import datetime, timedelta
+from pymongo import ReturnDocument
+
 
 routes = Blueprint('routes', __name__)
 mongo = dbConfig()
@@ -61,17 +63,34 @@ def addPost():
 def updatePost():
     token = get_jwt()
     data = request.get_json()
-    postData = data['postData']
+    oldPostData = data['oldPostData']
+    newPostData = data['newPostData']
+    updatedFields = {}
     
-    dbPost = list(mongo.posts.find_one({'postTitle':postData['postTitle']}))
+    
+    dbPost = mongo.posts.find_one({'postTitle':oldPostData['postTitle'], 'isDeleted':False, 'postedBy':token['sub']})
     if(not dbPost):
-        return jsonify({'message':'post not found'})
+        return jsonify({'message':'post not found'}), 404
     
-    if(dbPost[0]['email']!=token['sub']):
-        return jsonify({'message':'user is unauthorized to perform this action (you can only update your own post)'})
+    #rest of the update post logic 
+    if(not(('postTitle' in newPostData) or ('postBody' in newPostData))):
+        return jsonify({'message':'no field to update'}), 400
     
-    #rest of the update post logic
+    if('postTitle' in newPostData):
+        if(oldPostData['postTitle']==newPostData['postTitle']):
+            return jsonify({'message':'new post title and old post title is same'}), 400 
+        newDbPost = mongo.posts.find_one({'postTitle':newPostData['postTitle'], 'isDeleted':False, 'postedBy':token['sub']})
+        if(newDbPost):
+            return jsonify({'message':'post with same title already exists'}), 400
+        updatedFields['postTitle'] = newPostData['postTitle']
     
+    if('postBody' in newPostData):
+        if(oldPostData['postBody']==newPostData['postBody']):
+            return jsonify({'message':'new post body and old post body is same'}), 400 
+        updatedFields['postBody'] = newPostData['postBody']
+        
+    newPost = mongo.posts.find_one_and_update({'_id':dbPost['_id']}, {'$set':updatedFields}, return_document=ReturnDocument.AFTER)    
+    return jsonify({'message':'post updated', 'oldPost':dbPost, 'newPost':newPost}), 200
     
 # delete and restore post route
 @routes.route('/deleteRestorePost', methods=["PATCH"])
