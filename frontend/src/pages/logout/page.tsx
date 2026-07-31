@@ -6,6 +6,7 @@ export default function Logout(){
         const resp = axios.get("/api/logout")
         toast.success('Logged out')
         console.log('logged out')
+        window.location.href = '/login'
     }
 
     return(
