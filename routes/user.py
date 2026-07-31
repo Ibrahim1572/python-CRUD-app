@@ -87,3 +87,11 @@ def getProfile():
     token = get_jwt()
     
     return jsonify({'email':token['sub'], 'userName':token['userName'], 'role':token['role']})
+
+
+
+# test api route
+@routes.route('/api/test', methods=['GET'])
+def test_connection():
+    # This dictionary matches the key React is looking for: data.message
+    return jsonify({"message": "Hello from your Flask backend!"})
