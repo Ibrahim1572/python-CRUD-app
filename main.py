@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from flask_jwt_extended import JWTManager
 from routes.user import routes as user_routes
 from routes.mediaPosts import routes as mediaposts_routes
+from flask_cors import CORS
 
 load_dotenv()
 app = Flask(__name__)
@@ -18,6 +19,8 @@ app.config['JWT_SECRET_KEY'] = secretKey
 app.config['JWT_COOKIE_HTTPONLY'] = True
 app.config['JWT_COOKIE_CSRF_PROTECT'] = False
 app.config['JWT_TOKEN_LOCATION'] = ['cookies']
+
+cors = CORS(app, origins='*')
 
 jwt = JWTManager(app)
 
