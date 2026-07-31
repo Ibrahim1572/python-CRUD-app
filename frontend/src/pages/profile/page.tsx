@@ -14,6 +14,9 @@ export default function Profile(){
         setRole(response.data.role)
         console.log(`data: ${response.data}`)
     }
+    const goToLogout = () =>{
+        window.location.href = "/logout"
+    }
 
     return (
         <div>
@@ -26,6 +29,7 @@ export default function Profile(){
                     <h1>Role: {role}</h1>
                 </div>
             ):(<>no profile data to show</>)}</h1>
+            <button onClick={goToLogout}>logout</button>
         </div>
     )
 }
