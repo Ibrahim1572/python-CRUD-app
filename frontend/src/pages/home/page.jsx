@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { CgAdidas } from "react-icons/cg";
 
 function HomePage() {
   const [message, setMessage] = useState('Loading...');
@@ -13,7 +14,8 @@ function HomePage() {
 
   return (
     <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
-      <h1>Frontend Status</h1>
+      <CgAdidas className='text-8xl'/>
+      <h1>Frontend Status </h1>
       <p>Backend Response: <strong>{message}</strong></p>
     </div>
 
