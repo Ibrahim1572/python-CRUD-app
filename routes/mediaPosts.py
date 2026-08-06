@@ -17,7 +17,7 @@ def viewAll():
     isDeleted = request.args.get('isDeleted', 'false').lower()
     isDeleted = True if isDeleted == 'true' else False
     
-    posts = list(mongo.posts.find({'isDeleted':isDeleted}))
+    posts = list(mongo.posts.find({'isDeleted':isDeleted}).limit(20).sort('createdAt', -1))
     
     for post in posts:
         post['_id'] = str(post['_id'])

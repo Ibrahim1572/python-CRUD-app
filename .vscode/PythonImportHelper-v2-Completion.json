@@ -504,7 +504,7 @@
         "kind": 2,
         "importPath": "routes.mediaPosts",
         "description": "routes.mediaPosts",
-        "peekOfCode": "def viewAll():\n    isDeleted = request.args.get('isDeleted', 'false').lower()\n    isDeleted = True if isDeleted == 'true' else False\n    posts = list(mongo.posts.find({'isDeleted':isDeleted}))\n    for post in posts:\n        post['_id'] = str(post['_id'])\n    return jsonify({'posts':posts}), 200\n# view one post route\n@routes.route('/viewOne', methods=['POST'])\n@jwt_required()",
+        "peekOfCode": "def viewAll():\n    isDeleted = request.args.get('isDeleted', 'false').lower()\n    isDeleted = True if isDeleted == 'true' else False\n    posts = list(mongo.posts.find({'isDeleted':isDeleted}).limit(20).sort('createdAt', -1))\n    for post in posts:\n        post['_id'] = str(post['_id'])\n    return jsonify({'posts':posts}), 200\n# view one post route\n@routes.route('/viewOne', methods=['POST'])\n@jwt_required()",
         "detail": "routes.mediaPosts",
         "documentation": {}
     },
@@ -549,7 +549,7 @@
         "kind": 5,
         "importPath": "routes.mediaPosts",
         "description": "routes.mediaPosts",
-        "peekOfCode": "routes = Blueprint('mediaposts', __name__)\nmongo = dbConfig()\n# view all/archived posts route\n@routes.route('/viewAll', methods=['GET'])\n@jwt_required()\ndef viewAll():\n    isDeleted = request.args.get('isDeleted', 'false').lower()\n    isDeleted = True if isDeleted == 'true' else False\n    posts = list(mongo.posts.find({'isDeleted':isDeleted}))\n    for post in posts:",
+        "peekOfCode": "routes = Blueprint('mediaposts', __name__)\nmongo = dbConfig()\n# view all/archived posts route\n@routes.route('/viewAll', methods=['GET'])\n@jwt_required()\ndef viewAll():\n    isDeleted = request.args.get('isDeleted', 'false').lower()\n    isDeleted = True if isDeleted == 'true' else False\n    posts = list(mongo.posts.find({'isDeleted':isDeleted}).limit(20).sort('createdAt', -1))\n    for post in posts:",
         "detail": "routes.mediaPosts",
         "documentation": {}
     },
@@ -558,7 +558,7 @@
         "kind": 5,
         "importPath": "routes.mediaPosts",
         "description": "routes.mediaPosts",
-        "peekOfCode": "mongo = dbConfig()\n# view all/archived posts route\n@routes.route('/viewAll', methods=['GET'])\n@jwt_required()\ndef viewAll():\n    isDeleted = request.args.get('isDeleted', 'false').lower()\n    isDeleted = True if isDeleted == 'true' else False\n    posts = list(mongo.posts.find({'isDeleted':isDeleted}))\n    for post in posts:\n        post['_id'] = str(post['_id'])",
+        "peekOfCode": "mongo = dbConfig()\n# view all/archived posts route\n@routes.route('/viewAll', methods=['GET'])\n@jwt_required()\ndef viewAll():\n    isDeleted = request.args.get('isDeleted', 'false').lower()\n    isDeleted = True if isDeleted == 'true' else False\n    posts = list(mongo.posts.find({'isDeleted':isDeleted}).limit(20).sort('createdAt', -1))\n    for post in posts:\n        post['_id'] = str(post['_id'])",
         "detail": "routes.mediaPosts",
         "documentation": {}
     },
