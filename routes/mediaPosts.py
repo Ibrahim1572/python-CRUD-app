@@ -3,6 +3,8 @@ from utility.dbConnection import dbConfig
 from flask_jwt_extended import jwt_required, get_jwt
 from datetime import datetime, timedelta
 from pymongo import ReturnDocument
+import asyncio
+import pymongo.asynchronous
 
 
 routes = Blueprint('mediaposts', __name__)
@@ -24,7 +26,7 @@ def viewAll():
 
 
 # view one post route
-@routes.route('/viewOne', methods=['GET'])
+@routes.route('/viewOne', methods=['POST'])
 @jwt_required()
 def viewOne():
     data = request.get_json()
@@ -55,13 +57,14 @@ def addPost():
         'postedBy': token['sub'],
         'createdAt': datetime.now(),
         'updatedLog':[],
-        'isDeleted': False
+        'isDeleted': False,
+        'userName': token['userName']
     }   
     
     postedPost = mongo.posts.insert_one(newPost) 
-    postedPost['_id'] = str(postedPost['_id'])
+    newPost['_id'] = str(postedPost.inserted_id)
     
-    return jsonify({'message':'post added', 'post': newPost}), 200
+    return jsonify({'message':'post added', 'post': newPost, 'toastMessage':'Post Added'}), 200
     
     
      

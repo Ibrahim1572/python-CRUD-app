@@ -1,0 +1,700 @@
+[
+    {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "dbConfig",
+        "importPath": "utility.dbConnection",
+        "description": "utility.dbConnection",
+        "isExtraImport": true,
+        "detail": "utility.dbConnection",
+        "documentation": {}
+    },
+    {
+        "label": "dbConfig",
+        "importPath": "utility.dbConnection",
+        "description": "utility.dbConnection",
+        "isExtraImport": true,
+        "detail": "utility.dbConnection",
+        "documentation": {}
+    },
+    {
+        "label": "dbConfig",
+        "importPath": "utility.dbConnection",
+        "description": "utility.dbConnection",
+        "isExtraImport": true,
+        "detail": "utility.dbConnection",
+        "documentation": {}
+    },
+    {
+        "label": "jwt_required",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
+        "isExtraImport": true,
+        "detail": "flask_jwt_extended",
+        "documentation": {}
+    },
+    {
+        "label": "get_jwt",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
+        "isExtraImport": true,
+        "detail": "flask_jwt_extended",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
+        "isExtraImport": true,
+        "detail": "flask_jwt_extended",
+        "documentation": {}
+    },
+    {
+        "label": "create_refresh_token",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
+        "isExtraImport": true,
+        "detail": "flask_jwt_extended",
+        "documentation": {}
+    },
+    {
+        "label": "set_access_cookies",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
+        "isExtraImport": true,
+        "detail": "flask_jwt_extended",
+        "documentation": {}
+    },
+    {
+        "label": "set_refresh_cookies",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
+        "isExtraImport": true,
+        "detail": "flask_jwt_extended",
+        "documentation": {}
+    },
+    {
+        "label": "get_jwt",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
+        "isExtraImport": true,
+        "detail": "flask_jwt_extended",
+        "documentation": {}
+    },
+    {
+        "label": "jwt_required",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
+        "isExtraImport": true,
+        "detail": "flask_jwt_extended",
+        "documentation": {}
+    },
+    {
+        "label": "unset_jwt_cookies",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
+        "isExtraImport": true,
+        "detail": "flask_jwt_extended",
+        "documentation": {}
+    },
+    {
+        "label": "JWTManager",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
+        "isExtraImport": true,
+        "detail": "flask_jwt_extended",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "ReturnDocument",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "MongoClient",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "pymongo.asynchronous",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pymongo.asynchronous",
+        "description": "pymongo.asynchronous",
+        "detail": "pymongo.asynchronous",
+        "documentation": {}
+    },
+    {
+        "label": "PyMongo",
+        "importPath": "flask_pymongo",
+        "description": "flask_pymongo",
+        "isExtraImport": true,
+        "detail": "flask_pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "routes",
+        "importPath": "routes.user",
+        "description": "routes.user",
+        "isExtraImport": true,
+        "detail": "routes.user",
+        "documentation": {}
+    },
+    {
+        "label": "routes",
+        "importPath": "routes.user",
+        "description": "routes.user",
+        "isExtraImport": true,
+        "detail": "routes.user",
+        "documentation": {}
+    },
+    {
+        "label": "routes",
+        "importPath": "routes.mediaPosts",
+        "description": "routes.mediaPosts",
+        "isExtraImport": true,
+        "detail": "routes.mediaPosts",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"python-crud-app\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"python-crud-app\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"python-crud-app\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"python-crud-app\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"python-crud-app\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    for i in range(len(value)):\n        yield i",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    for i in range(len(value)):\n        yield i\ndef _object_keys(value):\n    for key in value:\n        yield key\ndef _is_array(value):",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "viewAll",
+        "kind": 2,
+        "importPath": "routes.mediaPosts",
+        "description": "routes.mediaPosts",
+        "peekOfCode": "def viewAll():\n    isDeleted = request.args.get('isDeleted', 'false').lower()\n    isDeleted = True if isDeleted == 'true' else False\n    posts = list(mongo.posts.find({'isDeleted':isDeleted}))\n    for post in posts:\n        post['_id'] = str(post['_id'])\n    return jsonify({'posts':posts}), 200\n# view one post route\n@routes.route('/viewOne', methods=['POST'])\n@jwt_required()",
+        "detail": "routes.mediaPosts",
+        "documentation": {}
+    },
+    {
+        "label": "viewOne",
+        "kind": 2,
+        "importPath": "routes.mediaPosts",
+        "description": "routes.mediaPosts",
+        "peekOfCode": "def viewOne():\n    data = request.get_json()\n    posts = list(mongo.posts.find({'isDeleted':False, 'postTitle':data['postTitle']}))\n    if(posts):\n        for post in posts:\n            post['_id'] = str(post['_id'])\n        return jsonify({'post':posts}), 200\n    else:\n        return jsonify({'message':'post not found'})\n# add post route ",
+        "detail": "routes.mediaPosts",
+        "documentation": {}
+    },
+    {
+        "label": "addPost",
+        "kind": 2,
+        "importPath": "routes.mediaPosts",
+        "description": "routes.mediaPosts",
+        "peekOfCode": "def addPost():\n    token = get_jwt()\n    data = request.get_json()\n    postData = data['postData']\n    dbPost = mongo.posts.find_one({'postTitle':postData['postTitle']})\n    if(dbPost):\n        return jsonify({'message':'post title already taken'})\n    newPost = {\n        'postTitle': postData['postTitle'],\n        'postBody': postData['postBody'],",
+        "detail": "routes.mediaPosts",
+        "documentation": {}
+    },
+    {
+        "label": "updatePost",
+        "kind": 2,
+        "importPath": "routes.mediaPosts",
+        "description": "routes.mediaPosts",
+        "peekOfCode": "def updatePost():\n    token = get_jwt()\n    data = request.get_json()\n    oldPostData = data['oldPostData']\n    newPostData = data['newPostData']\n    updatedFields = {}\n    dbPost = mongo.posts.find_one({'postTitle':oldPostData['postTitle'], 'isDeleted':False, 'postedBy':token['sub']})\n    if(not dbPost):\n        return jsonify({'message':'post not found'}), 404\n    nativePostId = dbPost['_id']",
+        "detail": "routes.mediaPosts",
+        "documentation": {}
+    },
+    {
+        "label": "deleteRestorePost",
+        "kind": 2,
+        "importPath": "routes.mediaPosts",
+        "description": "routes.mediaPosts",
+        "peekOfCode": "def deleteRestorePost():\n    token = get_jwt()\n    data = request.get_json()\n    postData = data['postData']\n    isDeleted = request.args.get('isDeleted', 'false').lower()\n    isDeleted = True if isDeleted == 'true' else False\n    dbPost =mongo.posts.find_one({'postTitle':postData['postTitle'], 'isDeleted':isDeleted})\n    # for post in dbPost:\n    #     post['_id'] = str(post['_id'])\n    # dbPost = dbPost[0]",
+        "detail": "routes.mediaPosts",
+        "documentation": {}
+    },
+    {
+        "label": "routes",
+        "kind": 5,
+        "importPath": "routes.mediaPosts",
+        "description": "routes.mediaPosts",
+        "peekOfCode": "routes = Blueprint('mediaposts', __name__)\nmongo = dbConfig()\n# view all/archived posts route\n@routes.route('/viewAll', methods=['GET'])\n@jwt_required()\ndef viewAll():\n    isDeleted = request.args.get('isDeleted', 'false').lower()\n    isDeleted = True if isDeleted == 'true' else False\n    posts = list(mongo.posts.find({'isDeleted':isDeleted}))\n    for post in posts:",
+        "detail": "routes.mediaPosts",
+        "documentation": {}
+    },
+    {
+        "label": "mongo",
+        "kind": 5,
+        "importPath": "routes.mediaPosts",
+        "description": "routes.mediaPosts",
+        "peekOfCode": "mongo = dbConfig()\n# view all/archived posts route\n@routes.route('/viewAll', methods=['GET'])\n@jwt_required()\ndef viewAll():\n    isDeleted = request.args.get('isDeleted', 'false').lower()\n    isDeleted = True if isDeleted == 'true' else False\n    posts = list(mongo.posts.find({'isDeleted':isDeleted}))\n    for post in posts:\n        post['_id'] = str(post['_id'])",
+        "detail": "routes.mediaPosts",
+        "documentation": {}
+    },
+    {
+        "label": "signUpFunc",
+        "kind": 2,
+        "importPath": "routes.user",
+        "description": "routes.user",
+        "peekOfCode": "def signUpFunc():\n    data = request.get_json()\n    dbUser = list(mongo.users.find({'email':data.get('email')}))\n    print('dbUser: ', dbUser)\n    if(dbUser):\n        return jsonify({'message':'user already exists with this email'}), 201\n    newUser = {\n        'userName' : data.get('userName'),\n        'password' : data.get('password'),\n        'email' : data.get('email'),",
+        "detail": "routes.user",
+        "documentation": {}
+    },
+    {
+        "label": "signOut",
+        "kind": 2,
+        "importPath": "routes.user",
+        "description": "routes.user",
+        "peekOfCode": "def signOut():\n    response = jsonify({'message': 'user logged out'})\n    unset_jwt_cookies(response)\n    return response, 200\n# Get profile data route\n@routes.route('/profile', methods=['GET'])\n@jwt_required()\ndef getProfile():\n    token = get_jwt()\n    return jsonify({'email':token['sub'], 'userName':token['userName'], 'role':token['role']})",
+        "detail": "routes.user",
+        "documentation": {}
+    },
+    {
+        "label": "getProfile",
+        "kind": 2,
+        "importPath": "routes.user",
+        "description": "routes.user",
+        "peekOfCode": "def getProfile():\n    token = get_jwt()\n    return jsonify({'email':token['sub'], 'userName':token['userName'], 'role':token['role']})\n# test api route\n@routes.route('/api/test', methods=['GET'])\ndef test_connection():\n    # This dictionary matches the key React is looking for: data.message\n    return jsonify({\"message\": \"Hello from your Flask backend!\"})",
+        "detail": "routes.user",
+        "documentation": {}
+    },
+    {
+        "label": "test_connection",
+        "kind": 2,
+        "importPath": "routes.user",
+        "description": "routes.user",
+        "peekOfCode": "def test_connection():\n    # This dictionary matches the key React is looking for: data.message\n    return jsonify({\"message\": \"Hello from your Flask backend!\"})",
+        "detail": "routes.user",
+        "documentation": {}
+    },
+    {
+        "label": "routes",
+        "kind": 5,
+        "importPath": "routes.user",
+        "description": "routes.user",
+        "peekOfCode": "routes = Blueprint('user', __name__)\nmongo = dbConfig()\n# signup route\n@routes.route('/signup', methods=['POST'])\ndef signUpFunc():\n    data = request.get_json()\n    dbUser = list(mongo.users.find({'email':data.get('email')}))\n    print('dbUser: ', dbUser)\n    if(dbUser):\n        return jsonify({'message':'user already exists with this email'}), 201",
+        "detail": "routes.user",
+        "documentation": {}
+    },
+    {
+        "label": "mongo",
+        "kind": 5,
+        "importPath": "routes.user",
+        "description": "routes.user",
+        "peekOfCode": "mongo = dbConfig()\n# signup route\n@routes.route('/signup', methods=['POST'])\ndef signUpFunc():\n    data = request.get_json()\n    dbUser = list(mongo.users.find({'email':data.get('email')}))\n    print('dbUser: ', dbUser)\n    if(dbUser):\n        return jsonify({'message':'user already exists with this email'}), 201\n    newUser = {",
+        "detail": "routes.user",
+        "documentation": {}
+    },
+    {
+        "label": "dbConfig",
+        "kind": 2,
+        "importPath": "utility.dbConnection",
+        "description": "utility.dbConnection",
+        "peekOfCode": "def dbConfig():\n    load_dotenv()\n    client = MongoClient(os.getenv('MONGO_DB_URI'))\n    db = client['pyCRUD']\n    print('MongoDB Connected')\n    return db",
+        "detail": "utility.dbConnection",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = Flask(__name__)\napp.register_blueprint(user_routes)\napp.register_blueprint(mediaposts_routes)\nsecretKey = os.getenv('JWT_SECRET_KEY')\n# print('secret key:', type(secretKey))\napp.config['JWT_SECRET_KEY'] = secretKey\napp.config['JWT_COOKIE_HTTPONLY'] = True\napp.config['JWT_COOKIE_CSRF_PROTECT'] = False\napp.config['JWT_TOKEN_LOCATION'] = ['cookies']\ncors = CORS(app, origins='*')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "secretKey",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "secretKey = os.getenv('JWT_SECRET_KEY')\n# print('secret key:', type(secretKey))\napp.config['JWT_SECRET_KEY'] = secretKey\napp.config['JWT_COOKIE_HTTPONLY'] = True\napp.config['JWT_COOKIE_CSRF_PROTECT'] = False\napp.config['JWT_TOKEN_LOCATION'] = ['cookies']\ncors = CORS(app, origins='*')\njwt = JWTManager(app)\n@app.route('/')\nasync def home():",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['JWT_SECRET_KEY']",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app.config['JWT_SECRET_KEY'] = secretKey\napp.config['JWT_COOKIE_HTTPONLY'] = True\napp.config['JWT_COOKIE_CSRF_PROTECT'] = False\napp.config['JWT_TOKEN_LOCATION'] = ['cookies']\ncors = CORS(app, origins='*')\njwt = JWTManager(app)\n@app.route('/')\nasync def home():\n    mongo = dbConfig()\n    print('user: ', list(mongo.cx['test']['users'].find({'userName':'asdf'})))",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['JWT_COOKIE_HTTPONLY']",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app.config['JWT_COOKIE_HTTPONLY'] = True\napp.config['JWT_COOKIE_CSRF_PROTECT'] = False\napp.config['JWT_TOKEN_LOCATION'] = ['cookies']\ncors = CORS(app, origins='*')\njwt = JWTManager(app)\n@app.route('/')\nasync def home():\n    mongo = dbConfig()\n    print('user: ', list(mongo.cx['test']['users'].find({'userName':'asdf'})))\n    print('user: ', type(list(mongo.cx['test']['users'].find({'userName':'asdf'}))))",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['JWT_COOKIE_CSRF_PROTECT']",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app.config['JWT_COOKIE_CSRF_PROTECT'] = False\napp.config['JWT_TOKEN_LOCATION'] = ['cookies']\ncors = CORS(app, origins='*')\njwt = JWTManager(app)\n@app.route('/')\nasync def home():\n    mongo = dbConfig()\n    print('user: ', list(mongo.cx['test']['users'].find({'userName':'asdf'})))\n    print('user: ', type(list(mongo.cx['test']['users'].find({'userName':'asdf'}))))\n    print(type(mongo))",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['JWT_TOKEN_LOCATION']",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app.config['JWT_TOKEN_LOCATION'] = ['cookies']\ncors = CORS(app, origins='*')\njwt = JWTManager(app)\n@app.route('/')\nasync def home():\n    mongo = dbConfig()\n    print('user: ', list(mongo.cx['test']['users'].find({'userName':'asdf'})))\n    print('user: ', type(list(mongo.cx['test']['users'].find({'userName':'asdf'}))))\n    print(type(mongo))\n    return jsonify({'message': 'this is message from flask home func yes'})",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "cors",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "cors = CORS(app, origins='*')\njwt = JWTManager(app)\n@app.route('/')\nasync def home():\n    mongo = dbConfig()\n    print('user: ', list(mongo.cx['test']['users'].find({'userName':'asdf'})))\n    print('user: ', type(list(mongo.cx['test']['users'].find({'userName':'asdf'}))))\n    print(type(mongo))\n    return jsonify({'message': 'this is message from flask home func yes'})\nif __name__ == \"__main__\":",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "jwt = JWTManager(app)\n@app.route('/')\nasync def home():\n    mongo = dbConfig()\n    print('user: ', list(mongo.cx['test']['users'].find({'userName':'asdf'})))\n    print('user: ', type(list(mongo.cx['test']['users'].find({'userName':'asdf'}))))\n    print(type(mongo))\n    return jsonify({'message': 'this is message from flask home func yes'})\nif __name__ == \"__main__\":\n    app.run(debug=True)",
+        "detail": "main",
+        "documentation": {}
+    }
+]
