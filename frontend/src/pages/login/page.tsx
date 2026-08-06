@@ -22,55 +22,167 @@ export default function Login(){
     }
 
     return (
-        <div className="login-container">
-            <div className="login-card">
-            
-            {/* Header Section */}
-            <div className="login-header">
-                <h2>Welcome Back</h2>
-                <p>Please enter your details to sign in</p>
-            </div>
+        <div
+            style={{
+                minHeight: "100vh",
+                width: "100%",
+                backgroundColor: "#000000",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "40px 24px",
+                fontFamily: "'LamboType', Roboto, 'Helvetica Neue', Arial, sans-serif",
+            }}
+        >
+            <div
+                style={{
+                    width: "100%",
+                    maxWidth: "440px",
+                    backgroundColor: "#202020",
+                    borderRadius: 0,
+                    padding: "56px 40px",
+                    borderBottom: "1px solid #202020",
+                }}
+            >
 
-            {/* Form Section */}
-            <form onSubmit={onlogin} className="login-form">
-                
-                {/* Email Field */}
-                <div className="form-group">
-                <label htmlFor="email">Email Address</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="name@company.com"
-                    value={email}
-                    // onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
+                {/* Header Section */}
+                <div style={{ marginBottom: "40px" }}>
+                    <h2
+                        style={{
+                            margin: 0,
+                            color: "#FFFFFF",
+                            fontSize: "40px",
+                            lineHeight: 1.15,
+                            fontWeight: 400,
+                            textTransform: "uppercase",
+                            letterSpacing: "normal",
+                        }}
+                    >
+                        Welcome Back
+                    </h2>
+                    <p
+                        style={{
+                            marginTop: "12px",
+                            marginBottom: 0,
+                            color: "#7D7D7D",
+                            fontSize: "16px",
+                            lineHeight: 1.5,
+                            fontWeight: 400,
+                        }}
+                    >
+                        Please enter your details to sign in
+                    </p>
                 </div>
 
-                {/* Password Field */}
-                <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="••••••••"
-                    value={password}
-                    // onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                </div>
+                {/* Form Section */}
+                <form
+                    onSubmit={onlogin}
+                    style={{ display: "flex", flexDirection: "column", gap: "24px" }}
+                >
 
-                {/* Action Button */}
-                <button type="submit" className="btn-login">
-                Sign In
-                </button>
+                    {/* Email Field */}
+                    <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                        <label
+                            htmlFor="email"
+                            style={{
+                                color: "#FFFFFF",
+                                fontSize: "12px",
+                                fontWeight: 500,
+                                textTransform: "uppercase",
+                                letterSpacing: "0.96px",
+                                lineHeight: 1.83,
+                            }}
+                        >
+                            Email Address
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="name@company.com"
+                            value={email}
+                            // onChange={(e) => setEmail(e.target.value)}
+                            required
+                            style={{
+                                backgroundColor: "#000000",
+                                border: "1px solid #494949",
+                                borderRadius: 0,
+                                color: "#FFFFFF",
+                                fontSize: "16px",
+                                fontFamily: "inherit",
+                                padding: "16px",
+                                outline: "none",
+                            }}
+                        />
+                    </div>
 
-            </form>
+                    {/* Password Field */}
+                    <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                        <label
+                            htmlFor="password"
+                            style={{
+                                color: "#FFFFFF",
+                                fontSize: "12px",
+                                fontWeight: 500,
+                                textTransform: "uppercase",
+                                letterSpacing: "0.96px",
+                                lineHeight: 1.83,
+                            }}
+                        >
+                            Password
+                        </label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="••••••••"
+                            value={password}
+                            // onChange={(e) => setPassword(e.target.value)}
+                            required
+                            style={{
+                                backgroundColor: "#000000",
+                                border: "1px solid #494949",
+                                borderRadius: 0,
+                                color: "#FFFFFF",
+                                fontSize: "16px",
+                                fontFamily: "inherit",
+                                padding: "16px",
+                                outline: "none",
+                            }}
+                        />
+                    </div>
+
+                    {/* Action Button */}
+                    <button
+                        type="submit"
+                        style={{
+                            marginTop: "8px",
+                            backgroundColor: "#FFC000",
+                            color: "#000000",
+                            border: "none",
+                            borderRadius: 0,
+                            padding: "24px",
+                            fontSize: "16px",
+                            fontWeight: 400,
+                            textTransform: "uppercase",
+                            letterSpacing: "normal",
+                            cursor: "pointer",
+                            transition: "background-color 0.15s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                            (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#917300"
+                        }}
+                        onMouseLeave={(e) => {
+                            (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#FFC000"
+                        }}
+                    >
+                        Sign In
+                    </button>
+
+                </form>
 
             </div>
         </div>
         );
-        
+
 }
