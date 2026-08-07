@@ -83,6 +83,13 @@ export default function Profile(){
                 >
                     Logout
                 </button>
+                <br/>
+                <button
+                    onClick={()=>{window.location.href = '/mediaposts'}}
+                    className="w-full mt-8 bg-transparent text-white border border-white/50 rounded-none py-4 text-[14.4px] font-light uppercase tracking-[0.2px] cursor-pointer transition-colors duration-150 hover:bg-[#1EAEDB] hover:opacity-70"
+                >
+                    MediaPosts Page
+                </button>
 
             </div>
         </div>
