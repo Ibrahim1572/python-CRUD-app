@@ -178,8 +178,35 @@ export default function Login(){
                     >
                         Sign In
                     </button>
+                    <button 
+                        type="submit"
+                        onClick={()=>{window.location.href = '/signUp'}}
+                        style={{
+                            marginTop: "8px",
+                            backgroundColor: "#202020",
+                            color: "#FFFFFF",
+                            border: "1px solid #494949",
+                            borderRadius: 0,
+                            padding: "24px",
+                            fontSize: "16px",
+                            fontWeight: 400,
+                            textTransform: "uppercase",
+                            letterSpacing: "normal",
+                            cursor: "pointer",
+                            transition: "background-color 0.15s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                            (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#1EAEDB" 
+                        }}
+                        onMouseLeave={(e) => {
+                            (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#202020"
+                        }}
+                    >
+                        Sign Up
+                    </button>
 
                 </form>
+                
 
             </div>
         </div>
