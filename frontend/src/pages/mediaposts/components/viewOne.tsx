@@ -39,6 +39,8 @@ export default function ViewOne(){
         const form = new FormData(e.currentTarget)
         setPostTitle(form.get('title') as string)
         const data = await axios.post("/api/viewOne", {'postTitle':form.get('title') as string})
+        // error handling here
+        setPostFound(true)
         setPostBody(data['data']['post'][0]['postBody']);
         setPostDate(data['data']['post'][0]['createdAt'])
         setPostedBy(data.data.post[0].userName)
@@ -60,13 +62,11 @@ export default function ViewOne(){
                 secondary: "#000000",
             },
         })       
-        if(postTitle&&postBody&&postedBy&&postDate){
-                setPostFound(true)
-            }
+        
         }
 
-    useEffect(()=>{
-    }, [postFound])
+    // useEffect(()=>{
+    // }, [postFound])
 
     const post = {'postTitle': 'post1', 'postBody':'this is body of demo post', 'postedBy':'user1'}
 
