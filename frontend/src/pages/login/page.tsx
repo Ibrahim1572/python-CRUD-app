@@ -18,7 +18,7 @@ export default function Login(){
         const response = axios.post('/api/signin', {'email':emailVal, 'password':passwordVal})
         toast.success("Logged In")
         console.log('logged in')
-        window.location.href = "/profile";
+        window.location.href = "/mediaposts";
     }
 
     return (
