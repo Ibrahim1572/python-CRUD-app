@@ -28,95 +28,293 @@ export default function Signup(){
     }
 
     return (
-        <div className="login-container">
-            <div className="login-card">
-            
-            {/* Header Section */}
-            <div className="login-header">
-                <h2>Welcome Back</h2>
-                <p>Please enter your details to sign up</p>
-            </div>
+        <div
+            style={{
+                minHeight: "100vh",
+                width: "100%",
+                backgroundColor: "#000000",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "40px 24px",
+                fontFamily: "'LamboType', Roboto, 'Helvetica Neue', Arial, sans-serif",
+            }}
+        >
+            <div
+                style={{
+                    width: "100%",
+                    maxWidth: "440px",
+                    backgroundColor: "#202020",
+                    borderRadius: 0,
+                    padding: "56px 40px",
+                    borderBottom: "1px solid #202020",
+                }}
+            >
 
-            {/* Form Section */}
-            <form onSubmit={onSignup} className="login-form">
-                
-                {/* Username Field */}
-                <div className="form-group">
-                <label htmlFor="username">username</label>
-                <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    placeholder="JohnDoe"
-                    value={username}
-                    // onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
+                {/* Header Section */}
+                <div style={{ marginBottom: "40px" }}>
+                    <h2
+                        style={{
+                            margin: 0,
+                            color: "#FFFFFF",
+                            fontSize: "40px",
+                            lineHeight: 1.15,
+                            fontWeight: 400,
+                            textTransform: "uppercase",
+                            letterSpacing: "normal",
+                        }}
+                    >
+                        Welcome Back
+                    </h2>
+                    <p
+                        style={{
+                            marginTop: "12px",
+                            marginBottom: 0,
+                            color: "#7D7D7D",
+                            fontSize: "16px",
+                            lineHeight: 1.5,
+                            fontWeight: 400,
+                        }}
+                    >
+                        Please enter your details to sign up
+                    </p>
                 </div>
 
-                {/* Email Field */}
-                <div className="form-group">
-                <label htmlFor="email">Email Address</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="name@company.com"
-                    value={email}
-                    // onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-                </div>
+                {/* Form Section */}
+                <form
+                    onSubmit={onSignup}
+                    style={{ display: "flex", flexDirection: "column", gap: "24px" }}
+                >
 
-                {/* Password Field */}
-                <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="••••••••"
-                    value={password}
-                    // onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                </div>
+                    {/* Username Field */}
+                    <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                        <label
+                            htmlFor="username"
+                            style={{
+                                color: "#FFFFFF",
+                                fontSize: "12px",
+                                fontWeight: 500,
+                                textTransform: "uppercase",
+                                letterSpacing: "0.96px",
+                                lineHeight: 1.83,
+                            }}
+                        >
+                            Username
+                        </label>
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="JohnDoe"
+                            value={username}
+                            // onChange={(e) => setPassword(e.target.value)}
+                            required
+                            style={{
+                                backgroundColor: "#000000",
+                                border: "1px solid #494949",
+                                borderRadius: 0,
+                                color: "#FFFFFF",
+                                fontSize: "16px",
+                                fontFamily: "inherit",
+                                padding: "16px",
+                                outline: "none",
+                            }}
+                        />
+                    </div>
 
-                <h3>Choose a Role:</h3>
+                    {/* Email Field */}
+                    <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                        <label
+                            htmlFor="email"
+                            style={{
+                                color: "#FFFFFF",
+                                fontSize: "12px",
+                                fontWeight: 500,
+                                textTransform: "uppercase",
+                                letterSpacing: "0.96px",
+                                lineHeight: 1.83,
+                            }}
+                        >
+                            Email Address
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="name@company.com"
+                            value={email}
+                            // onChange={(e) => setEmail(e.target.value)}
+                            required
+                            style={{
+                                backgroundColor: "#000000",
+                                border: "1px solid #494949",
+                                borderRadius: 0,
+                                color: "#FFFFFF",
+                                fontSize: "16px",
+                                fontFamily: "inherit",
+                                padding: "16px",
+                                outline: "none",
+                            }}
+                        />
+                    </div>
 
-                {/* Radio Option 1 */}
-                <label>
-                    <input
-                        type="radio"
-                        name="Role" // Same name groups them together
-                        value="standard"
-                        checked={role === 'standard'} // Controlled state logic
-                        onChange={handleOptionChange}
-                    />
-                    Standard
-                </label>
+                    {/* Password Field */}
+                    <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                        <label
+                            htmlFor="password"
+                            style={{
+                                color: "#FFFFFF",
+                                fontSize: "12px",
+                                fontWeight: 500,
+                                textTransform: "uppercase",
+                                letterSpacing: "0.96px",
+                                lineHeight: 1.83,
+                            }}
+                        >
+                            Password
+                        </label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="••••••••"
+                            value={password}
+                            // onChange={(e) => setPassword(e.target.value)}
+                            required
+                            style={{
+                                backgroundColor: "#000000",
+                                border: "1px solid #494949",
+                                borderRadius: 0,
+                                color: "#FFFFFF",
+                                fontSize: "16px",
+                                fontFamily: "inherit",
+                                padding: "16px",
+                                outline: "none",
+                            }}
+                        />
+                    </div>
 
-                <br />
+                    {/* Role Selection */}
+                    <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                        <h3
+                            style={{
+                                margin: 0,
+                                color: "#FFFFFF",
+                                fontSize: "12px",
+                                fontWeight: 500,
+                                textTransform: "uppercase",
+                                letterSpacing: "0.96px",
+                                lineHeight: 1.83,
+                            }}
+                        >
+                            Choose a Role
+                        </h3>
 
-                {/* Radio Option 2 */}
-                <label>
-                    <input
-                        type="radio"
-                        name="role"
-                        value="admin"
-                        checked={role === 'admin'}
-                        onChange={handleOptionChange}
-                    />
-                    Admin
-                </label>
-                <br/>
+                        <div style={{ display: "flex", flexDirection: "row", gap: "24px" }}>
 
-                {/* Action Button */}
-                <button type="submit" className="btn-login">
-                Sign Up
-                </button>
+                            {/* Radio Option 1 */}
+                            <label
+                                style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    gap: "8px",
+                                    color: "#F5F5F5",
+                                    fontSize: "14px",
+                                    fontWeight: 400,
+                                    cursor: "pointer",
+                                }}
+                            >
+                                <input
+                                    type="radio"
+                                    name="Role" // Same name groups them together
+                                    value="standard"
+                                    checked={role === 'standard'} // Controlled state logic
+                                    onChange={handleOptionChange}
+                                    style={{ accentColor: "#FFC000" }}
+                                />
+                                Standard
+                            </label>
 
-            </form>
+                            {/* Radio Option 2 */}
+                            <label
+                                style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    gap: "8px",
+                                    color: "#F5F5F5",
+                                    fontSize: "14px",
+                                    fontWeight: 400,
+                                    cursor: "pointer",
+                                }}
+                            >
+                                <input
+                                    type="radio"
+                                    name="role"
+                                    value="admin"
+                                    checked={role === 'admin'}
+                                    onChange={handleOptionChange}
+                                    style={{ accentColor: "#FFC000" }}
+                                />
+                                Admin
+                            </label>
+
+                        </div>
+                    </div>
+
+                    {/* Action Button */}
+                    <button
+                        type="submit"
+                        style={{
+                            marginTop: "8px",
+                            backgroundColor: "#FFC000",
+                            color: "#000000",
+                            border: "none",
+                            borderRadius: 0,
+                            padding: "24px",
+                            fontSize: "16px",
+                            fontWeight: 400,
+                            textTransform: "uppercase",
+                            letterSpacing: "normal",
+                            cursor: "pointer",
+                            transition: "background-color 0.15s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                            (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#917300"
+                        }}
+                        onMouseLeave={(e) => {
+                            (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#FFC000"
+                        }}
+                    >
+                        Sign Up
+                    </button>
+                    <button 
+                        type="submit"
+                        onClick={()=>{window.location.href = '/login'}}
+                        style={{
+                            marginTop: "8px",
+                            backgroundColor: "#202020",
+                            color: "#FFFFFF",
+                            border: "1px solid #494949",
+                            borderRadius: 0,
+                            padding: "24px",
+                            fontSize: "16px",
+                            fontWeight: 400,
+                            textTransform: "uppercase",
+                            letterSpacing: "normal",
+                            cursor: "pointer",
+                            transition: "background-color 0.15s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                            (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#1EAEDB" 
+                        }}
+                        onMouseLeave={(e) => {
+                            (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#202020"
+                        }}
+                    >
+                        Sign In
+                    </button>
+
+                </form>
 
             </div>
         </div>
