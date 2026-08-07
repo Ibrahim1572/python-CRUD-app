@@ -88,7 +88,7 @@ def updatePost():
     if(not(('postTitle' in newPostData) or ('postBody' in newPostData))):
         return jsonify({'message':'no field to update'}), 400
     
-    if('postTitle' in newPostData):
+    if(('postTitle' in newPostData)and(newPostData['postTitle'])):
         if(oldPostData['postTitle']==newPostData['postTitle']):
             return jsonify({'message':'new post title and old post title is same'}), 400 
         newDbPost = mongo.posts.find_one({'postTitle':newPostData['postTitle'], 'isDeleted':False, 'postedBy':token['sub']})
@@ -97,7 +97,7 @@ def updatePost():
         # newDbPost['_id'] = str(newDbPost['_id'])
         updatedFields['postTitle'] = newPostData['postTitle']
     
-    if('postBody' in newPostData):
+    if(('postBody' in newPostData)and(newPostData['postBody'])):
         if(oldPostData['postBody']==newPostData['postBody']):
             return jsonify({'message':'new post body and old post body is same'}), 400 
         updatedFields['postBody'] = newPostData['postBody']
