@@ -5,6 +5,7 @@ import UpdatePost from "./components/updatePost";
 import ViewAll from "./components/viewAll";
 import ViewArchived from "./components/viewArchived";
 import ViewOne from "./components/viewOne";
+import RestorePost from "./components/restorePost";
 
 export default function Mediaposts(){
     const [currentView, setCurrentView] = useState("addPost")
@@ -32,6 +33,10 @@ export default function Mediaposts(){
             case 'viewArchived':
                 return <ViewArchived/>
                 break;
+
+            case 'restorePost':
+                return <RestorePost/>
+                break;
         
             default:
                 return <AddPost/>
@@ -56,6 +61,9 @@ export default function Mediaposts(){
                 </div>
                 <div onClick={()=>{setCurrentView('deletePost')}} className="bg-transparent text-white border border-white/50 px-4 py-4 text-[14.4px] font-light uppercase tracking-[0.2px] rounded-none cursor-pointer transition-colors duration-150 hover:bg-[#1EAEDB] hover:opacity-70">
                     Delete Post
+                </div>
+                <div onClick={()=>{setCurrentView('restorePost')}} className="bg-transparent text-white border border-white/50 px-4 py-4 text-[14.4px] font-light uppercase tracking-[0.2px] rounded-none cursor-pointer transition-colors duration-150 hover:bg-[#1EAEDB] hover:opacity-70">
+                    Restore Post
                 </div>
                 <div onClick={()=>{setCurrentView('viewOne')}} className="bg-transparent text-white border border-white/50 px-4 py-4 text-[14.4px] font-light uppercase tracking-[0.2px] rounded-none cursor-pointer transition-colors duration-150 hover:bg-[#1EAEDB] hover:opacity-70">
                     View One
