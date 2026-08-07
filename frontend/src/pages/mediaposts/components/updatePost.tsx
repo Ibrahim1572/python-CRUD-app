@@ -38,57 +38,104 @@ export default function UpdatePost(){
     const post = {'postTitle': 'post1', 'postBody':'this is body of demo post', 'postedBy':'user1'}
 
     return (
-        <div>
-            <h2>
+        <div className="w-full max-w-[560px] flex flex-col gap-y-12 font-sans">
+
+            <h2 className="text-white text-[27px] leading-[1.37] font-normal uppercase m-0">
                 Update Post
             </h2>
-            <form className="flex flex-col items-center justify-center border-2 border-white p-4 bg-gray-600/40 rounded-xl" onSubmit={setPostData}>
-                <div className="flex flex-row p-2">
-                    <h3 className="text-b px-1 ">Post Title:</h3>
-                    <input className="border-white/50 border-[1.5px] rounded-sm text-" placeholder="My Cat" name="title"/>
+
+            <form
+                className="flex flex-col gap-6 bg-[#202020] border-b border-[#202020] p-10 rounded-none"
+                onSubmit={setPostData}
+            >
+                <div className="flex flex-col gap-2">
+                    <label
+                        htmlFor="title"
+                        className="text-white text-xs font-medium uppercase tracking-[0.96px] leading-[1.83]"
+                    >
+                        Post Title
+                    </label>
+                    <input
+                        id="title"
+                        name="title"
+                        placeholder="My Cat"
+                        className="bg-black border border-[#494949] rounded-none text-white text-base font-normal px-4 py-4 outline-none placeholder:text-[#7D7D7D]"
+                    />
                 </div>
-                <button className="bg-green-500 hover:bg-green-600 text-white rounded-sm px-25" type="submit"> Search </button>
+                <button
+                    type="submit"
+                    className="bg-[#FFC000] text-black rounded-none py-6 text-base font-normal uppercase tracking-normal cursor-pointer transition-colors duration-150 hover:bg-[#917300]"
+                >
+                    Search
+                </button>
             </form>
-            <br/>
-            <div className="flex flex-col items-center justify-center border-2 border-white p-4 bg-gray-600/40 rounded-xl">
+
+            <div className="flex flex-col items-center justify-center bg-[#202020] border-b border-[#202020] p-10 rounded-none">
                 {(postFound)?
                     (
                         <>
-                        <div className="flex flex-col">
-                            <h2>
+                        <div className="flex flex-col items-center gap-3 text-center">
+                            <h2 className="text-white text-2xl font-normal m-0">
                                 {postTitle}
                             </h2>
-                            <div className="flex flex-row items-center justify-center">
+                            <div className="flex flex-row items-center gap-2 text-[#7D7D7D]">
                                 <FaRegUserCircle />
-                                <h3 className="p-1">@{postedBy}</h3>
+                                <span className="text-sm font-normal">@{postedBy}</span>
                             </div>
-                            <h3>
+                            <p className="text-[#F5F5F5] text-base font-normal leading-relaxed m-0">
                                 {postBody}
-                            </h3>
+                            </p>
                         </div>
                         </>
                     ):
                     (
                         <div>
-                            <h3 className="p-8">
+                            <p className="text-[#7D7D7D] text-base font-normal py-8 m-0">
                                 Post Not Found
-                                </h3>
+                                </p>
                         </div> 
                     )}
             </div>
-            <br/>
             <div>
                 {(postFound)?(
-                    <form className="flex flex-col items-center justify-center border-2 border-white p-4 bg-gray-600/40 rounded-xl" onSubmit={setNewPostData}>
-                        <div className="flex flex-row p-2">
-                            <h3 className="text-b px-1 ">New Post Title:</h3>
-                            <input className="border-white/50 border-[1.5px] rounded-sm text-" placeholder="My Cat" name="newTitle"/>
+                    <form
+                        className="flex flex-col gap-6 bg-[#202020] border-b border-[#202020] p-10 rounded-none"
+                        onSubmit={setNewPostData}
+                    >
+                        <div className="flex flex-col gap-2">
+                            <label
+                                htmlFor="newTitle"
+                                className="text-white text-xs font-medium uppercase tracking-[0.96px] leading-[1.83]"
+                            >
+                                New Post Title
+                            </label>
+                            <input
+                                id="newTitle"
+                                name="newTitle"
+                                placeholder="My Cat"
+                                className="bg-black border border-[#494949] rounded-none text-white text-base font-normal px-4 py-4 outline-none placeholder:text-[#7D7D7D]"
+                            />
                         </div>
-                        <div className="flex flex-row p-2">
-                            <h3 className="text-b px-1 ">New Post Body:</h3>
-                            <input className="border-white/50 border-[1.5px] rounded-sm text-" placeholder="My Cat" name="newBody"/>
+                        <div className="flex flex-col gap-2">
+                            <label
+                                htmlFor="newBody"
+                                className="text-white text-xs font-medium uppercase tracking-[0.96px] leading-[1.83]"
+                            >
+                                New Post Body
+                            </label>
+                            <input
+                                id="newBody"
+                                name="newBody"
+                                placeholder="My Cat"
+                                className="bg-black border border-[#494949] rounded-none text-white text-base font-normal px-4 py-4 outline-none placeholder:text-[#7D7D7D]"
+                            />
                         </div>
-                        <button className="bg-green-500 hover:bg-green-600 text-white rounded-sm px-25" type="submit"> Update Post </button>
+                        <button
+                            type="submit"
+                            className="bg-[#FFC000] text-black rounded-none py-6 text-base font-normal uppercase tracking-normal cursor-pointer transition-colors duration-150 hover:bg-[#917300]"
+                        >
+                            Update Post
+                        </button>
                     </form>
                 ):(<></>)}
                 
