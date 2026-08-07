@@ -85,10 +85,11 @@ def updatePost():
     nativePostId = dbPost['_id']
     dbPost['_id'] = str(dbPost['_id'])
     #rest of the update post logic 
-    if(not(('postTitle' in newPostData) or ('postBody' in newPostData))):
+    if(not(newPostData['postTitle'] or newPostData['postBody'])):
         return jsonify({'message':'no field to update'}), 400
     
     if(('postTitle' in newPostData)and(newPostData['postTitle'])):
+        print('yes title')
         if(oldPostData['postTitle']==newPostData['postTitle']):
             return jsonify({'message':'new post title and old post title is same'}), 400 
         newDbPost = mongo.posts.find_one({'postTitle':newPostData['postTitle'], 'isDeleted':False, 'postedBy':token['sub']})
@@ -98,10 +99,12 @@ def updatePost():
         updatedFields['postTitle'] = newPostData['postTitle']
     
     if(('postBody' in newPostData)and(newPostData['postBody'])):
+        print('yes body')
         if(oldPostData['postBody']==newPostData['postBody']):
             return jsonify({'message':'new post body and old post body is same'}), 400 
         updatedFields['postBody'] = newPostData['postBody']
         
+    print(f'updated fields: {updatedFields}')
     newPost = mongo.posts.find_one_and_update({'_id':nativePostId}, {'$set':updatedFields, '$push':{'updatedLog':datetime.now()}}, return_document=ReturnDocument.AFTER)    
     newPost['_id'] = str(newPost['_id'])
     return jsonify({'message':'post updated', 'oldPost':dbPost, 'newPost':newPost}), 200
